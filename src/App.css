@@ -46,19 +46,21 @@ body {
 
 /* Arıza Talep Formu: son link, boşluk yok */
 .link:nth-child(5) {
-  margin-right: 0;
+  margin-right: 40px;
 }
 
 /* Alt metin */
 .link-with-subtext {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 30px;
   white-space: nowrap;
 }
 
 .subtext {
-  margin-top: 4px;
+  margin-top: 0;
+  margin-left: 36px; 
   font-size: 70%;
   color: #fbf704;
   font-weight: bold;

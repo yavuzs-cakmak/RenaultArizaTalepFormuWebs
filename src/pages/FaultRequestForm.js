@@ -334,7 +334,7 @@ Renault, KVKK’nin 13. maddesi uyarınca başvurunuzu, talebin niteliğine gör
 
           {page === 3 && (
             <>
-              <h2>Renault Bayi Seçimi</h2>
+              <h2>Servis/Bakım Bayi Listesi</h2>
               <DealerMap
                 selectedDealer={selectedDealer}
                 setSelectedDealer={setSelectedDealer}
