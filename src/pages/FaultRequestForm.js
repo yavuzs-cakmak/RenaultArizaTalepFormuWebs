@@ -1,5 +1,7 @@
 
 import React, { useState } from 'react';
+import { Box as MuiBox } from '@mui/material';
+import { Modal } from '@mui/material';
 import DealerMap from './DealerMap';
 import Bakim from './bakim';
 import Footer from '../components/Footer';
@@ -17,6 +19,7 @@ import {
   const phoneRegex = /^\+90\d{3}\d{3}\d{2}\d{2}$/;
 
 function FaultRequestForm() {
+  const [openModal, setOpenModal] = useState(false);
   const [page, setPage] = useState(1);
 
   // Sayfa 1: İletişim Bilgileri
@@ -93,6 +96,8 @@ Seçilen Bayi: ${selectedDealer}`);
             border: '1px solid #ccc',
             borderRadius: 2,
             boxShadow: 2,
+            backgroundColor: '#fff',
+            opacity: 0.97,
           }}
         >
           {page === 1 && (
@@ -120,7 +125,19 @@ Seçilen Bayi: ${selectedDealer}`);
               <TextField
                 label="Telefon Numarası"
                 value={phone}
-                onChange={e => setPhone(e.target.value)}
+                onChange={e => {
+                  let val = e.target.value;
+                  // Eğer başında + yoksa otomatik ekle
+                  if (!val.startsWith("+905")) {
+                    val = "+905" + val.replace(/^\+?905?/, "");
+                  }
+                  // Sadece +905 ve 9 rakamdan fazlasına izin verme
+                  if (val.length > 13) {
+                    val = val.slice(0, 13);
+                  }
+                  setPhone(val);
+                }}
+                onFocus={() => { if (phone === "") setPhone("+905"); }}
                 error={phone !== "" && !phoneRegex.test(phone)}
                 helperText={phone !== "" && !phoneRegex.test(phone) ? "Geçersiz telefon" : ""}
                 type="tel"
@@ -140,7 +157,11 @@ Seçilen Bayi: ${selectedDealer}`);
               <TextField
                 label="Şasi No"
                 value={vehicleidNo}
-                onChange={e => setVehicleidNo(e.target.value)}
+                onChange={e => {
+                  let val = e.target.value.toUpperCase();
+                  if (val.length > 17) val = val.slice(0, 17);
+                  setVehicleidNo(val);
+                }}
                 error={vehicleidNo !== "" && !sasiNoRegex.test(vehicleidNo)}
                 helperText={vehicleidNo !== "" && !sasiNoRegex.test(vehicleidNo) ? "Geçersiz şasi no" : ""}
                 variant="outlined"
@@ -149,7 +170,11 @@ Seçilen Bayi: ${selectedDealer}`);
               <TextField
                 label="Plaka"
                 value={plate}
-                onChange={e => setPlate(e.target.value)}
+                onChange={e => {
+                  let val = e.target.value.toUpperCase();
+                  if (val.length > 9) val = val.slice(0, 9);
+                  setPlate(val);
+                }}
                 error={plate !== "" && !plateRegex.test(plate)}
                 helperText={plate !== "" && !plateRegex.test(plate) ? "Geçersiz plaka" : ""}
                 variant="outlined"
@@ -166,12 +191,19 @@ Seçilen Bayi: ${selectedDealer}`);
               <TextField
                 label="Arıza Açıklaması"
                 value={faultDescription}
-                onChange={e => setFaultDescription(e.target.value)}
+                onChange={e => {
+                  let val = e.target.value;
+                  if (val.length > 1000) val = val.slice(0, 1000);
+                  setFaultDescription(val);
+                }}
                 multiline
                 rows={3}
                 variant="outlined"
                 required
               />
+              <div style={{ fontSize: '12px', color: '#888', marginTop: '4px', textAlign: 'right' }}>
+                {faultDescription.length}/1000
+              </div>
               <Bakim />
               <FormControlLabel
                 control={
@@ -180,8 +212,115 @@ Seçilen Bayi: ${selectedDealer}`);
                     onChange={(e) => setKvkkApproval(e.target.checked)}
                   />
                 }
-                label="KVKK sözleşmesini okudum ve kabul ediyorum"
+                label={
+                  <span>
+                    KVKK kapsamındaki{' '}
+                    <span
+                      style={{ color: '#1976d2', textDecoration: 'underline', cursor: 'pointer' }}
+                      onClick={() => setOpenModal(true)}
+                    >
+                      aydınlatma metnini
+                    </span>{' '}okudum ve kabul ediyorum
+                  </span>
+                }
               />
+
+              <Modal open={openModal} onClose={() => setOpenModal(false)}>
+                <MuiBox sx={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  bgcolor: 'background.paper',
+                  boxShadow: 24,
+                  p: 4,
+                  borderRadius: 2,
+                  minWidth: 300,
+                  maxWidth: 500,
+                  maxHeight: 500,
+                  outline: 'none',
+                  overflowY: 'auto',
+                }}>
+                  <h3>KVKK Aydınlatma Metni</h3>
+                  <p>
+                    Renault Türkiye – KVKK Aydınlatma Metni
+Renault Mais A.Ş. (“Renault” veya “Şirket”) olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) kapsamında, arıza talep formu üzerinden toplanan kişisel verilerinizin işlenmesine ilişkin sizleri bilgilendirmek isteriz.
+
+1. Veri Sorumlusunun Kimliği
+Veri Sorumlusu: Renault Mais A.Ş. Adres: Fatih Sultan Mehmet Mah. Balkan Cad. No: 58 Buyaka E Blok Tepeüstü Ümraniye / İstanbul Telefon: +90 (216) 578 94 00 Web Sitesi: https://www.renault.com.tr E-posta: kvkk@renault.com.tr
+
+2. Kişisel Verilerin İşlenme Amaçları
+Arıza talep formu aracılığıyla ilettiğiniz kişisel verileriniz aşağıdaki amaçlarla işlenmektedir:
+
+Talep ettiğiniz servis işlemlerinin yürütülmesi
+
+Arıza bildirimlerinin değerlendirilmesi ve çözüm süreçlerinin yönetilmesi
+
+Müşteri memnuniyetinin sağlanması ve hizmet kalitesinin artırılması
+
+Yasal yükümlülüklerin yerine getirilmesi
+
+İlgili bayi ve servis noktalarıyla iletişim kurulması
+
+Gerekli durumlarda hukuki süreçlerin yürütülmesi
+
+3. Kişisel Verilerin Toplanma Yöntemi ve Hukuki Sebebi
+Kişisel verileriniz, arıza talep formu üzerinden elektronik ortamda doğrudan sizlerden alınmakta olup KVKK’nın 5. ve 6. maddelerinde belirtilen:
+
+Açık rıza
+
+Bir sözleşmenin kurulması veya ifası
+
+Hukuki yükümlülüğün yerine getirilmesi
+
+Meşru menfaat
+
+hukuki sebeplerine dayanarak işlenmektedir.
+
+4. Kişisel Verilerin Aktarılması
+Kişisel verileriniz, yukarıda belirtilen amaçlar doğrultusunda:
+
+Renault yetkili servisleri ve bayileri
+
+Dijital hizmet sağlayıcıları (form altyapısı, çağrı merkezi vb.)
+
+Hukuken yetkili kamu kurumları ve özel kişiler
+
+ile KVKK’nın 8. ve 9. maddelerine uygun şekilde paylaşılabilir. Yurtdışına aktarım söz konusu olduğunda, KVKK’da belirtilen güvenlik ve izin şartlarına uygun hareket edilir.
+
+5. KVKK Kapsamındaki Haklarınız
+KVKK’nın 11. maddesi uyarınca Renault’a başvurarak:
+
+Kişisel verilerinizin işlenip işlenmediğini öğrenme
+
+İşlenmişse buna ilişkin bilgi talep etme
+
+İşlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme
+
+Yurt içi veya yurt dışı aktarıldığı kişileri öğrenme
+
+Eksik veya yanlış işlenmişse düzeltilmesini isteme
+
+KVKK’ya aykırı işlenmişse silinmesini veya yok edilmesini talep etme
+
+Otomatik sistemlerle analiz edilmesine itiraz etme
+
+Zarara uğramışsanız giderilmesini talep etme
+
+haklarına sahipsiniz. 6. KVKK Kapsamında Başvuru Hakkınız
+KVKK kapsamında Renault’a kişisel verilerinizle ilgili taleplerinizi yazılı olarak iletebilirsiniz. Bu kapsamda, “Veri Sahibi Başvuru Formu”nu doldurarak kimliğinizi doğrulayıcı belgelerle birlikte:
+
+Renault Mais A.Ş. merkez adresine elden teslim edebilir,
+
+Kayıtlı Elektronik Posta (KEP) üzerinden kvkk@renault.hs01.kep.tr adresine gönderebilir,
+
+Noter kanalıyla veya posta yoluyla “Fatih Sultan Mehmet Mah. Balkan Cad. No: 58 Buyaka E Blok Tepeüstü Ümraniye / İstanbul” adresine iletebilirsiniz.
+
+Renault, KVKK’nin 13. maddesi uyarınca başvurunuzu, talebin niteliğine göre en geç 30 (otuz) gün içinde ücretsiz olarak sonuçlandıracaktır. Ancak işlemin ayrıca bir maliyet gerektirmesi halinde, Kişisel Verileri Koruma Kurulu tarafından belirlenen tarifeye göre ücret talep edilebilir. Talebin reddedilmesi durumunda, gerekçeli ret cevabı yazılı olarak veya elektronik ortamda tarafınıza iletilir.
+                  </p>
+                  <Button variant="contained" onClick={() => setOpenModal(false)} sx={{ mt: 2 }}>Kapat</Button>
+                </MuiBox>
+              </Modal>
               <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <Button variant="outlined" onClick={back}>
                   Geri
@@ -200,6 +339,8 @@ Seçilen Bayi: ${selectedDealer}`);
                 selectedDealer={selectedDealer}
                 setSelectedDealer={setSelectedDealer}
               />
+              
+            
               <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
                 <Button variant="outlined" onClick={back}>
                   Geri

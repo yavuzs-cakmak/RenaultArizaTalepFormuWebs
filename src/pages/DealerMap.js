@@ -1,7 +1,20 @@
+
+import L from 'leaflet';
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Box, TextField, Button, List, ListItem, ListItemButton, ListItemText, Typography } from '@mui/material';
+
+// Leaflet marker icon fix for React
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: markerIcon2x,
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
 
 function DealerMap({ selectedDealer, setSelectedDealer }) {
   const [dealers, setDealers] = useState([]);
@@ -79,15 +92,14 @@ function DealerMap({ selectedDealer, setSelectedDealer }) {
         </MapContainer>
       )}
 
-      <TextField
-        label="Seçilen Bayi"
-        value={selectedDealer}
-        onChange={(e) => setSelectedDealer(e.target.value)}
-        variant="outlined"
-        fullWidth
-        sx={{ mt: 2 }}
-        required
-      />
+        <TextField
+                     label="Seçilen Bayi"
+                     value={selectedDealer}
+                     InputProps={{ readOnly: true }}
+                     variant="outlined"
+                     fullWidth
+                     sx={{ mt: 2 }}
+                   />
     </Box>
   );
 }
