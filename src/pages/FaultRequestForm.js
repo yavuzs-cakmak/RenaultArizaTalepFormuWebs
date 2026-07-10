@@ -38,7 +38,7 @@ function FaultRequestForm() {
   const [plate, setPlate] = useState("");
   const [kilometer, setKilometer] = useState("");
   const [faultDescription, setFaultDescription] = useState("");
-  const [maintenanceRequired, ] = useState(false);
+  const [maintenanceRequired, setMaintenanceRequired] = useState(false);
   const [kvkkApproval, setKvkkApproval] = useState(false);
   const isPage2Valid =
   sasiNoRegex.test(vehicleidNo) && vehicleidNo.trim() !== "" &&
@@ -204,7 +204,7 @@ Seçilen Bayi: ${selectedDealer}`);
               <div style={{ fontSize: '12px', color: '#888', marginTop: '4px', textAlign: 'right' }}>
                 {faultDescription.length}/1000
               </div>
-              <Bakim />
+              <Bakim checked={maintenanceRequired} onChange={(e) => setMaintenanceRequired(e.target.checked)} />
               <FormControlLabel
                 control={
                   <Checkbox
