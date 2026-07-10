@@ -40,33 +40,25 @@ Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleye
 
 ### Kurulum Adımları
 
-1. Repoyu bilgisayarınıza klonlayın:
+### 1. **Repoyu bilgisayarınıza klonlayın:**
    ```bash
    git clone [https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git](https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git)
-Proje dizinine gidin:
 
-Bash
-cd RenaultArizaTalepFormuWebs
-Gerekli bağımlılıkları (dependencies) yükleyin:
-
-Bash
-npm install
-Ortam değişkenlerini ayarlayın:
+### 2. **Proje dizinine gidin:**
+       **cd RenaultArizaTalepFormuWebs**
+### 3. **Gerekli bağımlılıkları (dependencies) yükleyin:**
+       npm install
+### 4. **Ortam değişkenlerini ayarlayın:**
 Proje kök dizininde bir .env dosyası oluşturun ve yetkili API erişimi için gerekli token'ı ekleyin:
+       REACT_APP_API_TOKEN=sizin_gizli_token_degeriniz
+### 5. Geliştirme sunucusunu başlatın:
+       npm start dev
+       Proje varsayılan olarak http://localhost:[size özel adresiniz] adresinde çalışacaktır.
 
-Kod snippet'i
-REACT_APP_API_TOKEN=sizin_gizli_token_degeriniz
-Geliştirme sunucusunu başlatın:
 
-Bash
-npm start
-Proje varsayılan olarak http://localhost:3000 adresinde çalışacaktır.
+## 🏗 Gelecek Geliştirmeler (Roadmap & Improvements)
+* State Management: Uygulama ölçeklendiğinde prop-drilling'i engellemek için Context API veya Redux/Zustand entegrasyonu.
 
-```
+* Derleme Aracı (Build Tool): Performans optimizasyonu için Create React App'ten Vite mimarisine geçiş.
 
-🏗 Gelecek Geliştirmeler (Roadmap & Improvements)
-State Management: Uygulama ölçeklendiğinde prop-drilling'i engellemek için Context API veya Redux/Zustand entegrasyonu.
-
-Derleme Aracı (Build Tool): Performans optimizasyonu için Create React App'ten Vite mimarisine geçiş.
-
-Unit Testing: Form validasyonları ve çok adımlı bileşenler için Jest ve React Testing Library ile test senaryolarının yazılması.
+* Unit Testing: Form validasyonları ve çok adımlı bileşenler için Jest ve React Testing Library ile test senaryolarının yazılması.
