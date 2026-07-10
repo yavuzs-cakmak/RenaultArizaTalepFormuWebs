@@ -14,6 +14,20 @@ Bu proje, **Renault Dacia MAİS Genel Müdürlüğü** bünyesinde geliştirilmi
 
 Müşterilerin arıza kayıtlarını manuel sistemlerden dijital bir platforma taşımak amacıyla tasarlanmıştır. Kullanıcı deneyimini (UX) artırmak için süreç "Çok Adımlı Form (Multi-step Wizard)" mimarisiyle bölünmüş, kullanıcının en yakın yetkili servisi harita üzerinden interaktif olarak seçebilmesi sağlanmıştır.
 
+## 📸 Projenin Canlı'da Fotoğrafları
+
+**1. Anasayfa**
+![Anasayfa](resim_linki_buraya)
+
+---
+
+**2. Arıza Talep Formu için İletişim Bilgileri Formu**
+![Arıza Talep Formu için İletişim Bilgileri Formu](resim_linki_buraya)
+
+---
+
+
+
 ## 🚀 Öne Çıkan Özellikler (Features)
 
 *   **Çok Adımlı Form Mimarisi:** İletişim, Araç Bilgileri ve Bayi Seçimi adımları state üzerinden izole edilerek kullanıcı dostu bir akış kurgulandı.
