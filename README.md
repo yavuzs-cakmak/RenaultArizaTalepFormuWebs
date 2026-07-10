@@ -58,14 +58,14 @@ Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleye
    ```bash
    git clone [https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git](https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git)
 
-### 2. **Proje dizinine gidin:**
-       **cd RenaultArizaTalepFormuWebs**
-### 3. **Gerekli bağımlılıkları (dependencies) yükleyin:**
+### 2. Proje dizinine gidin:
+       cd RenaultArizaTalepFormuWebs
+### 3. Gerekli bağımlılıkları (dependencies) yükleyin:
        npm install
-### 4. **Ortam değişkenlerini ayarlayın:**
+### 4. Ortam değişkenlerini ayarlayın:
 Proje kök dizininde bir .env dosyası oluşturun ve yetkili API erişimi için gerekli token'ı ekleyin:
        REACT_APP_API_TOKEN=sizin_gizli_token_degeriniz
-### 5. **Geliştirme sunucusunu başlatın:**
+### 5. Geliştirme sunucusunu başlatın:
        npm start dev
        Proje varsayılan olarak http://localhost:[size özel adresiniz] adresinde çalışacaktır.
 ```
@@ -130,14 +130,14 @@ NPM or Yarn
 Bash
 git clone [https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git](https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git)
 
-### 2. **Navigate to the project directory:**
-    **cd RenaultArizaTalepFormuWebs**
-### 3. **Install the required dependencies:**
+### 2. Navigate to the project directory:
+    cd RenaultArizaTalepFormuWebs
+### 3. Install the required dependencies:
     npm install
-### 4. **Configure environment variables:**
+### 4. Configure environment variables:
 Create a .env file in the project root directory and add the required token for authorized API access:
     REACT_APP_API_TOKEN=your_secret_token_value
-### 5. **Start the development server:**
+### 5. Start the development server:
     npm start dev
     The project will run by default at http://localhost:[your_specific_address].
 
