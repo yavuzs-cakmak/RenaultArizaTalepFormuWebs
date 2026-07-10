@@ -114,32 +114,32 @@ It was designed to migrate customer fault logs from manual systems to a digital 
 
 ## 📸 Photos of the Project in Action
 
-**1. Homepage**
+**1. Homepage**-
 ![Homepage](https://github.com/user-attachments/assets/e1b5c067-7b6b-4f00-a53b-1271878fc794)
 
 ---
 
-**2. Contact Information Form for Fault Request Form**
+**2. Contact Information Form for Fault Request Form**-
 ![Contact Information Form for Fault Request Form](https://github.com/user-attachments/assets/58056b49-277f-40a4-9dcb-72c677daa21e)
 
 ---
 
-**3. Vehicle and Fault Information Form for the Fault Request Form**
+**3. Vehicle and Fault Information Form for the Fault Request Form**-
 ![Vehicle and Fault Information Form for the Fault Request Form](https://github.com/user-attachments/assets/6d9384ea-de69-4c15-a649-afacab1a14a2)
 
 ---
 
-**4. Service / Maintenance Dealer List Selection Screen**
+**4. Service / Maintenance Dealer List Selection Screen**-
 ![Service / Maintenance Dealer List Selection Screen](https://github.com/user-attachments/assets/077e9554-4074-4b0c-9777-47dcedee62a5)
 
 ---
 
-**5. "Service Request Successfully Submitted" Alert Message**
+**5. "Service Request Successfully Submitted" Alert Message**-
 ![A"Service Request Successfully Submitted" Alert Message](https://github.com/user-attachments/assets/7a8934c6-01cd-49f3-a072-5bd6c2585604)
 
 ---
 
-**6. Request Successfully Received – Information Message Screen**
+**6. Request Successfully Received – Information Message Screen**-
 ![Request Successfully Received – Information Message Screen](https://github.com/user-attachments/assets/a61ddc0b-920c-4395-89ef-6bdd68744e3c)
 
 ---
