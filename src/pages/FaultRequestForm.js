@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Box as MuiBox } from '@mui/material';
 import { Modal } from '@mui/material';
 import DealerMap from './DealerMap';
-import Bakim from './bakim';
+import Bakim from './Bakim';
 import Footer from '../components/Footer';
 import {
   Box,
