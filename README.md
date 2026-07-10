@@ -62,6 +62,8 @@ Bash
 npm start
 Proje varsayılan olarak http://localhost:3000 adresinde çalışacaktır.
 
+```
+
 🏗 Gelecek Geliştirmeler (Roadmap & Improvements)
 State Management: Uygulama ölçeklendiğinde prop-drilling'i engellemek için Context API veya Redux/Zustand entegrasyonu.
 
