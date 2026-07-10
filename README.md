@@ -125,8 +125,9 @@ Node.js (v16 or higher recommended)
 NPM or Yarn
 
 ### Installation Steps
-```bash
+
 ### 1. **Clone the repository to your computer:**
+```bash
 Bash
 git clone [https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git](https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git)
 
