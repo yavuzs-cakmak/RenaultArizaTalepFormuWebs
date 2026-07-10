@@ -22,27 +22,27 @@ Müşterilerin arıza kayıtlarını manuel sistemlerden dijital bir platforma t
 ---
 
 **2. Arıza Talep Formu için İletişim Bilgileri Formu**
-![Arıza Talep Formu için İletişim Bilgileri Formu](github.com/user-attachments/assets/58056b49-277f-40a4-9dcb-72c677daa21e)
+![Arıza Talep Formu için İletişim Bilgileri Formu](https://github.com/user-attachments/assets/58056b49-277f-40a4-9dcb-72c677daa21e)
 
 ---
 
 **3. Arıza Talep Formu için Araç ve Arıza Bilgileri Formu**
-![Arıza Talep Formu için Araç ve Arıza Bilgileri Formu](github.com/user-attachments/assets/6d9384ea-de69-4c15-a649-afacab1a14a2)
+![Arıza Talep Formu için Araç ve Arıza Bilgileri Formu](https://github.com/user-attachments/assets/6d9384ea-de69-4c15-a649-afacab1a14a2)
 
 ---
 
 **4. Servis / Bakım Bayi Listesi Seçim Ekranı**
-![Servis / Bakım Bayi Listesi Seçim Ekranı](github.com/user-attachments/assets/077e9554-4074-4b0c-9777-47dcedee62a5)
+![Servis / Bakım Bayi Listesi Seçim Ekranı](https://github.com/user-attachments/assets/077e9554-4074-4b0c-9777-47dcedee62a5)
 
 ---
 
 **5. Arıza Talebiniz Başarıyla Göncerilmiştir Alert Mesajı**
-![Arıza Talebiniz Başarıyla Göncerilmiştir Alert Mesajı](github.com/user-attachments/assets/7a8934c6-01cd-49f3-a072-5bd6c2585604)
+![Arıza Talebiniz Başarıyla Göncerilmiştir Alert Mesajı](https://github.com/user-attachments/assets/7a8934c6-01cd-49f3-a072-5bd6c2585604)
 
 ---
 
 **6. Talebiniz Başarıyla Alınmıştır Bilgi Mesajı Ekranı**
-![Talebiniz Başarıyla Alınmıştır Bilgi Mesajı Ekranı](github.com/user-attachments/assets/a61ddc0b-920c-4395-89ef-6bdd68744e3c)
+![Talebiniz Başarıyla Alınmıştır Bilgi Mesajı Ekranı](https://github.com/user-attachments/assets/a61ddc0b-920c-4395-89ef-6bdd68744e3c)
 
 ---
 
