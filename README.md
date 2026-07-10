@@ -17,16 +17,34 @@ Müşterilerin arıza kayıtlarını manuel sistemlerden dijital bir platforma t
 ## 📸 Projenin Canlı'da Fotoğrafları
 
 **1. Anasayfa**
-![Anasayfa](resim_linki_buraya)
+![Anasayfa](<img width="1536" height="689" alt="Image" src="https://github.com/user-attachments/assets/e1b5c067-7b6b-4f00-a53b-1271878fc794" />)
 
 ---
 
 **2. Arıza Talep Formu için İletişim Bilgileri Formu**
-![Arıza Talep Formu için İletişim Bilgileri Formu](resim_linki_buraya)
+![Arıza Talep Formu için İletişim Bilgileri Formu](<img width="1535" height="688" alt="Image" src="https://github.com/user-attachments/assets/58056b49-277f-40a4-9dcb-72c677daa21e" />)
 
 ---
 
+**3. Arıza Talep Formu için Araç ve Arıza Bilgileri Formu**
+![Arıza Talep Formu için Araç ve Arıza Bilgileri Formu](<img width="1536" height="688" alt="Image" src="https://github.com/user-attachments/assets/6d9384ea-de69-4c15-a649-afacab1a14a2" />)
 
+---
+
+**4. Servis / Bakım Bayi Listesi Seçim Ekranı**
+![Servis / Bakım Bayi Listesi Seçim Ekranı](<img width="1532" height="691" alt="Image" src="https://github.com/user-attachments/assets/077e9554-4074-4b0c-9777-47dcedee62a5" />)
+
+---
+
+**5. Arıza Talebiniz Başarıyla Göncerilmiştir Alert Mesajı**
+![Arıza Talebiniz Başarıyla Göncerilmiştir Alert Mesajı](<img width="1536" height="737" alt="Image" src="https://github.com/user-attachments/assets/7a8934c6-01cd-49f3-a072-5bd6c2585604" />)
+
+---
+
+**6. Talebiniz Başarıyla Alınmıştır Bilgi Mesajı Ekranı**
+![Talebiniz Başarıyla Alınmıştır Bilgi Mesajı Ekranı](<img width="1536" height="688" alt="Image" src="https://github.com/user-attachments/assets/a61ddc0b-920c-4395-89ef-6bdd68744e3c" />)
+
+---
 
 ## 🚀 Öne Çıkan Özellikler (Features)
 
@@ -58,14 +76,14 @@ Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleye
    ```bash
    git clone [https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git](https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git)
 
-### 2. Proje dizinine gidin:
+- 2. Proje dizinine gidin:
        cd RenaultArizaTalepFormuWebs
-### 3. Gerekli bağımlılıkları (dependencies) yükleyin:
+- 3. Gerekli bağımlılıkları (dependencies) yükleyin:
        npm install
-### 4. Ortam değişkenlerini ayarlayın:
+- 4. Ortam değişkenlerini ayarlayın:
 Proje kök dizininde bir .env dosyası oluşturun ve yetkili API erişimi için gerekli token'ı ekleyin:
        REACT_APP_API_TOKEN=sizin_gizli_token_degeriniz
-### 5. Geliştirme sunucusunu başlatın:
+- 5. Geliştirme sunucusunu başlatın:
        npm start dev
        Proje varsayılan olarak http://localhost:[size özel adresiniz] adresinde çalışacaktır.
 ```
@@ -128,17 +146,16 @@ NPM or Yarn
 
 ### 1. **Clone the repository to your computer:**
 ```bash
-Bash
 git clone [https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git](https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git)
 
-### 2. Navigate to the project directory:
+- 2. Navigate to the project directory:
     cd RenaultArizaTalepFormuWebs
-### 3. Install the required dependencies:
+- 3. Install the required dependencies:
     npm install
-### 4. Configure environment variables:
+- 4. Configure environment variables:
 Create a .env file in the project root directory and add the required token for authorized API access:
     REACT_APP_API_TOKEN=your_secret_token_value
-### 5. Start the development server:
+- 5. Start the development server:
     npm start dev
     The project will run by default at http://localhost:[your_specific_address].
 
