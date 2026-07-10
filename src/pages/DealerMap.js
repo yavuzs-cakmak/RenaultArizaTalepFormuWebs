@@ -28,7 +28,7 @@ function DealerMap({ selectedDealer, setSelectedDealer }) {
     fetch('https://as-mais-backend.azurewebsites.net/api/mais/dealers', {
       method: 'GET',
       headers: {
-        Authorization: 'Bearer 2e663a7d-2993-441f-bc45-912d75c6bbeb',
+        Authorization: 'Bearer ' + process.env.REACT_APP_API_TOKEN,
       },
     })
     .then((res) => res.json())
