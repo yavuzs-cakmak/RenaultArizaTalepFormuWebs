@@ -54,7 +54,7 @@ Proje kök dizininde bir .env dosyası oluşturun ve yetkili API erişimi için 
 ### 5. Geliştirme sunucusunu başlatın:
        npm start dev
        Proje varsayılan olarak http://localhost:[size özel adresiniz] adresinde çalışacaktır.
-
+```
 
 ## 🏗 Gelecek Geliştirmeler (Roadmap & Improvements)
 * State Management: Uygulama ölçeklendiğinde prop-drilling'i engellemek için Context API veya Redux/Zustand entegrasyonu.
