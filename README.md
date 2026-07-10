@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# TR
+# Renault Arıza Talep Formu (Fault Request Form)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
+![Leaflet](https://img.shields.io/badge/Leaflet-%23199900.svg?style=for-the-badge&logo=Leaflet&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-## Available Scripts
+Bu proje, **Renault Dacia MAİS Genel Müdürlüğü** bünyesinde geliştirilmiş, kullanıcıların araç arıza taleplerini dijital ortamda hızlı, güvenli ve lokasyon bazlı olarak iletebilmelerini sağlayan tek sayfalı bir web uygulamasıdır (SPA).
 
-In the project directory, you can run:
+🌍 **Canlı Demo:** [renault-ariza-talep-formu-webs.vercel.app](https://renault-ariza-talep-formu-webs.vercel.app)
 
-### `npm start`
+## 📌 Proje Özeti (Business Case)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Müşterilerin arıza kayıtlarını manuel sistemlerden dijital bir platforma taşımak amacıyla tasarlanmıştır. Kullanıcı deneyimini (UX) artırmak için süreç "Çok Adımlı Form (Multi-step Wizard)" mimarisiyle bölünmüş, kullanıcının en yakın yetkili servisi harita üzerinden interaktif olarak seçebilmesi sağlanmıştır.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Öne Çıkan Özellikler (Features)
 
-### `npm test`
+*   **Çok Adımlı Form Mimarisi:** İletişim, Araç Bilgileri ve Bayi Seçimi adımları state üzerinden izole edilerek kullanıcı dostu bir akış kurgulandı.
+*   **Gelişmiş İstemci Taraflı Doğrulama (Client-Side Validation):** Kullanıcı hatalarını minimize etmek için Ad, E-posta, Telefon, Şasi Numarası (17 hane) ve Plaka formatları **Regex** ile anlık olarak doğrulanmaktadır.
+*   **İnteraktif Harita Entegrasyonu (Leaflet):** API üzerinden çekilen yetkili servis koordinatları, `react-leaflet` kullanılarak harita üzerinde render edilmektedir.
+*   **Güvenli API İletişimi:** Bayi lokasyonları dış bir REST API'den çekilirken, token tabanlı yetkilendirme (Bearer Token) ortam değişkenleri (Environment Variables) ile korunmaktadır.
+*   **KVKK Uyumlu Süreç:** Kullanıcı verilerinin işlenmesi, Modal tabanlı dinamik aydınlatma metni ve zorunlu onay mekanizması ile yasal standartlara uygun hale getirilmiştir.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Kullanılan Teknolojiler (Tech Stack)
 
-### `npm run build`
+*   **Framework/Kütüphane:** React.js (Create React App)
+*   **Yönlendirme (Routing):** React Router DOM v7
+*   **Kullanıcı Arayüzü (UI):** Material-UI (MUI v7), Emotion (Styled Components)
+*   **Harita/Lokasyon:** Leaflet, React-Leaflet
+*   **Deployment:** Vercel
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Kurulum ve Çalıştırma (Getting Started)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Ön Koşullar
+*   Node.js (v16 veya üzeri önerilir)
+*   NPM veya Yarn
 
-### `npm run eject`
+### Kurulum Adımları
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Repoyu bilgisayarınıza klonlayın:
+   ```bash
+   git clone [https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git](https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git)
+Proje dizinine gidin:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Bash
+cd RenaultArizaTalepFormuWebs
+Gerekli bağımlılıkları (dependencies) yükleyin:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Bash
+npm install
+Ortam değişkenlerini ayarlayın:
+Proje kök dizininde bir .env dosyası oluşturun ve yetkili API erişimi için gerekli token'ı ekleyin:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Kod snippet'i
+REACT_APP_API_TOKEN=sizin_gizli_token_degeriniz
+Geliştirme sunucusunu başlatın:
 
-## Learn More
+Bash
+npm start
+Proje varsayılan olarak http://localhost:3000 adresinde çalışacaktır.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🏗 Gelecek Geliştirmeler (Roadmap & Improvements)
+State Management: Uygulama ölçeklendiğinde prop-drilling'i engellemek için Context API veya Redux/Zustand entegrasyonu.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Derleme Aracı (Build Tool): Performans optimizasyonu için Create React App'ten Vite mimarisine geçiş.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Unit Testing: Form validasyonları ve çok adımlı bileşenler için Jest ve React Testing Library ile test senaryolarının yazılması.
