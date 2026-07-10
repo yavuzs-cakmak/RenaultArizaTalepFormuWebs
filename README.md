@@ -62,3 +62,66 @@ Proje kök dizininde bir .env dosyası oluşturun ve yetkili API erişimi için 
 * Derleme Aracı (Build Tool): Performans optimizasyonu için Create React App'ten Vite mimarisine geçiş.
 
 * Unit Testing: Form validasyonları ve çok adımlı bileşenler için Jest ve React Testing Library ile test senaryolarının yazılması.
+
+  ---
+
+  EN
+Renault Fault Request Form
+This project is a single-page web application (SPA) developed within the Renault Dacia MAİS Headquarters, allowing users to submit vehicle fault requests digitally in a fast, secure, and location-based manner.
+
+🌍 Live Demo: renault-ariza-talep-formu-webs.vercel.app
+
+📌 Project Summary (Business Case)
+It was designed to migrate customer fault logs from manual systems to a digital platform. To improve the user experience (UX), the process was divided using a "Multi-step Form (Wizard)" architecture, allowing the user to interactively select the nearest authorized dealer on the map.
+
+🚀 Key Features
+Multi-Step Form Architecture: The Contact, Vehicle Information, and Dealer Selection steps were isolated via state, creating a user-friendly flow.
+
+Advanced Client-Side Validation: To minimize user errors, Name, Email, Phone, VIN (17 digits), and License Plate formats are instantly validated using Regex.
+
+Interactive Map Integration (Leaflet): Authorized dealer coordinates fetched via API are rendered on the map using react-leaflet.
+
+Secure API Communication: While dealer locations are fetched from an external REST API, token-based authorization (Bearer Token) is secured with Environment Variables.
+
+KVKK (GDPR) Compliant Process: The processing of user data has been brought into compliance with legal standards via a Modal-based dynamic disclosure text and a mandatory approval mechanism.
+
+🛠 Tech Stack
+Framework/Library: React.js (Create React App)
+
+Routing: React Router DOM v7
+
+User Interface (UI): Material-UI (MUI v7), Emotion (Styled Components)
+
+Map/Location: Leaflet, React-Leaflet
+
+Deployment: Vercel
+
+📂 Getting Started
+You can follow the steps below to run the project in your local environment.
+
+Prerequisites
+Node.js (v16 or higher recommended)
+
+NPM or Yarn
+
+Installation Steps
+1. Clone the repository to your computer:
+Bash
+git clone [https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git](https://github.com/yavuzs-cakmak/RenaultArizaTalepFormuWebs.git)
+
+### 2. **Navigate to the project directory:**
+    **cd RenaultArizaTalepFormuWebs**
+### 3. **Install the required dependencies:**
+    npm install
+### 4. **Configure environment variables:**
+Create a .env file in the project root directory and add the required token for authorized API access:
+    REACT_APP_API_TOKEN=your_secret_token_value
+### 5. Start the development server:
+    npm start dev
+    The project will run by default at http://localhost:[your_specific_address].
+🏗 Roadmap & Improvements
+State Management: Context API or Redux/Zustand integration to prevent prop-drilling as the application scales.
+
+Build Tool: Transitioning from Create React App to Vite architecture for performance optimization.
+
+Unit Testing: Writing test scenarios for form validations and multi-step components using Jest and React Testing Library.
