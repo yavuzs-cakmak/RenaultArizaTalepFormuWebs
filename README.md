@@ -36,7 +36,7 @@ Müşterilerin arıza kayıtlarını manuel sistemlerden dijital bir platforma t
 
 ---
 
-**5. Arıza Talebiniz Başarıyla Göncerilmiştir Alert Mesajı**
+**5. Arıza Talebiniz Başarıyla Gönderilmiştir Alert Mesajı**
 ![Arıza Talebiniz Başarıyla Göncerilmiştir Alert Mesajı](https://github.com/user-attachments/assets/7a8934c6-01cd-49f3-a072-5bd6c2585604)
 
 ---
@@ -111,6 +111,38 @@ This project is a single-page web application (SPA) developed within the **Renau
 
 ## 📌 Project Summary (Business Case)
 It was designed to migrate customer fault logs from manual systems to a digital platform. To improve the user experience (UX), the process was divided using a "Multi-step Form (Wizard)" architecture, allowing the user to interactively select the nearest authorized dealer on the map.
+
+## 📸 Photos of the Project in Action
+
+**1. Homepage**
+![Homepage](https://github.com/user-attachments/assets/e1b5c067-7b6b-4f00-a53b-1271878fc794)
+
+---
+
+**2. Contact Information Form for Fault Request Form**
+![Contact Information Form for Fault Request Form](https://github.com/user-attachments/assets/58056b49-277f-40a4-9dcb-72c677daa21e)
+
+---
+
+**3. Vehicle and Fault Information Form for the Fault Request Form**
+![Vehicle and Fault Information Form for the Fault Request Form](https://github.com/user-attachments/assets/6d9384ea-de69-4c15-a649-afacab1a14a2)
+
+---
+
+**4. Service / Maintenance Dealer List Selection Screen**
+![Service / Maintenance Dealer List Selection Screen](https://github.com/user-attachments/assets/077e9554-4074-4b0c-9777-47dcedee62a5)
+
+---
+
+**5. "Service Request Successfully Submitted" Alert Message**
+![A"Service Request Successfully Submitted" Alert Message](https://github.com/user-attachments/assets/7a8934c6-01cd-49f3-a072-5bd6c2585604)
+
+---
+
+**6. Request Successfully Received – Information Message Screen**
+![Request Successfully Received – Information Message Screen](https://github.com/user-attachments/assets/a61ddc0b-920c-4395-89ef-6bdd68744e3c)
+
+---
 
 ## 🚀 Key Features
 **Multi-Step Form Architecture:** The Contact, Vehicle Information, and Dealer Selection steps were isolated via state, creating a user-friendly flow.
